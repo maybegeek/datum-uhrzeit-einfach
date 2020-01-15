@@ -1,0 +1,134 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 380%;
+  display: grid;
+  grid-template-columns: minmax(220px, 1380px);
+  justify-content: center;
+  font-family: 'Cabin', sans-serif;
+  color: white;
+  background-color: #34495e;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body > article {
+  flex: 1;
+}
+
+.container_wochentage,
+.container_datum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em 0;
+}
+
+.container_uhren {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_wochentage nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.container_wochentage nav span {
+  font-size: 0.22em;
+}
+
+.container_wochentage nav span#mont {order: 1}
+.container_wochentage nav span#dien {order: 2}
+.container_wochentage nav span#mitt {order: 3}
+.container_wochentage nav span#donn {order: 4}
+.container_wochentage nav span#frei {order: 5}
+.container_wochentage nav span#sams {order: 6}
+.container_wochentage nav span#sonn {order: 7}
+
+.container_wochentage nav span.heutigertag {
+  font-size: 1.2em;
+}
+
+.container_datum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_datum #kalender {
+  text-align: center;
+}
+
+.container_uhren_flex {
+  width: 100%;
+  text-align: center;
+}
+
+.container_textuhr {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em 0;
+}
+
+#circa {
+  font-size: 80%;
+}
+
+.container_analoguhr {
+  padding: 0.3em 0;
+}
+
+/* Farben */
+.container_wochentage,
+.container_textuhr {
+  background-color: #e67e22;
+}
+
+.container_datum,
+.container_analoguhr {
+  background-color: #34495e;
+}
+
+@media (min-width: 900px) {
+  .container_wochentage nav {
+    width: 100%;
+    padding-right: 0.4em;
+    padding-left: 0.4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .container_datum {
+    padding-top: 0.8em;
+  }
+  .container_uhren_flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .container_textuhr,
+  .container_analoguhr {
+    flex: 1 50%;
+    align-items: center;
+  }
+  .container_wochentage,
+  .container_textuhr {
+    background-color: #34495e;
+  }
+}
